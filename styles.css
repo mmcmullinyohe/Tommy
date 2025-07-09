@@ -1,6 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     background-color:rgb(197, 230, 241);
+     font-family:"Lato", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
 }
+
+nav {
+    height: 100px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+}
+
 
 h1 {
     color:chocolate;
@@ -8,4 +27,37 @@ h1 {
 
 h2 {
     color:blueviolet;
+}
+
+.personal__logo {
+    color:blue;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    padding: 0 24px;
+    max-width: 100%;
+}
+
+.header {
+    padding: 10px, 50px;
+    display:flex;
+    justify-content: center;
+}
+
+.about-tommy__picture {
+  transform: translate(-60px, -70px);
+}
+
+.about-tommy__picture--mask {
+    width: 400px;
+    height: 500px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
+    margin-bottom: 20px;
+    animation: animate-profile-picture 800ms 200ms backwards;
+    
+    
 }
