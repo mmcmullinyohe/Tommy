@@ -17,6 +17,7 @@
 h1 {
     text-align: center;
     line-height: 1.25;
+    font-size: 30px;
 }
 
 h2 {
@@ -96,3 +97,20 @@ nav {
     
     
 }
+.wave {
+    display: inline-block;
+    animation: animate-wave 500ms infinite;
+}
+
+@keyframes animate-wave {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
