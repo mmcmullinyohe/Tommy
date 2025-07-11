@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
-    background-color:rgb(197, 230, 241);
+    
      font-family:"Lato", sans-serif;
     padding: 0;
     margin: 0;
@@ -38,6 +38,7 @@ p {
 /*Nav Bar*/
 
 nav {
+    background-color:rgb(197, 230, 241);
     height: 100px;
     width: 100%;
     max-width: 1000px;
@@ -70,10 +71,12 @@ nav {
 /*About*/
 
 #about-tommy {
+
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
    
 }
 
@@ -161,7 +164,7 @@ nav {
 /*Family*/
 #family{
     padding: 0 24px;
-    dis
+
 }
 
 .about-me__img {
@@ -225,3 +228,47 @@ nav {
     margin-left: 32px;
 }
 
+/* Footer */
+footer {
+    background-color: #242424;
+}
+
+
+.footer__row {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8% 0;
+}
+
+.footer__logo--img {
+    width: 220px;
+    height: 220px;
+
+}
+
+.footer__social--link,
+.footer__copyright,
+.footer__logo--popper {
+    color: white;
+}
+
+.footer__logo--popper {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+.footer__anchor {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.footer__anchor:hover .footer__logo--popper {
+transform: translateX(60px);
+opacity: 1;
+}
