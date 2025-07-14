@@ -35,6 +35,10 @@ p {
     color: rgb(6, 141, 13)
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /*Nav Bar*/
 
 nav {
