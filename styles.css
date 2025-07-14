@@ -13,6 +13,14 @@
     list-style-type: none;
  }
 
+.flex {
+    display: flex;
+}
+
+
+.flex-1 {
+    flex: 1;
+}
 
 h1 {
     text-align: center;
@@ -37,6 +45,13 @@ p {
 
 html {
     scroll-behavior: smooth;
+}
+
+.row {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 12px;
 }
 
 /*Nav Bar*/
@@ -80,7 +95,6 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
    
 }
 
@@ -90,6 +104,7 @@ nav {
      display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 16px;
 }
 
 .about-tommy-intro {
@@ -101,8 +116,6 @@ nav {
 .img__container {
     padding: 0 24px;
     max-width: 100%;
-   display: flex;
-   
 }
 
 
@@ -193,6 +206,11 @@ nav {
     
 }
 
+.img__row {
+    display: flex;
+    flex-direction: column;
+}
+
 /*Roblox*/
 
 .roblox__pics--mask {
@@ -233,25 +251,31 @@ nav {
 }
 
 /* Footer */
+/* Footer */
 footer {
     background-color: #242424;
 }
 
+.footer__social--list {
+   width: 100%;
+   max-width: 500px;
+   display: flex;
+   justify-content: space-around;
+    margin-bottom: 28px; 
+}
 
 .footer__row {
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 8% 0;
+    padding: 8px 0;
 }
-
 .footer__logo--img {
-    width: 220px;
-    height: 220px;
+    width: 300px;
+    height: 300px;
 
 }
-
 .footer__social--link,
 .footer__copyright,
 .footer__logo--popper {
@@ -273,6 +297,6 @@ footer {
 }
 
 .footer__anchor:hover .footer__logo--popper {
-transform: translateX(60px);
+transform: translateX(20px);
 opacity: 1;
 }
