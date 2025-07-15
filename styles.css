@@ -54,6 +54,10 @@ html {
     padding: 0 12px;
 }
 
+body {
+      background-color:rgb(197, 230, 241);
+}
+
 /*Nav Bar*/
 
 nav {
@@ -299,4 +303,54 @@ footer {
 .footer__anchor:hover .footer__logo--popper {
 transform: translateX(20px);
 opacity: 1;
+}
+
+
+
+/* Small Phones, Tablets, and Large Smart Phones */
+@media (max-width: 768px) {
+nav {
+    height: 68px;
+}
+h1 {
+    font-size: 28px;
+}
+
+.about-me__info--para {
+    font-size: 18px;
+}
+
+}
+
+/*Small Phones */
+
+@media (max-width: 480px) {
+.nav__link:not(:last-child) {
+    display: none;
+}
+
+.project__description {
+    padding: 0;
+    left: 0;
+    width: 100%;
+}
+
+.project__description--para {
+  display: none;  
+}
+
+.project__description--links {
+display: flex;
+justify-content: center;
+}
+
+.project__description--sub-title {
+   text-align: center; 
+   margin: 12px 0;
+}
+.project__description--title {
+    font-size: 32px;
+    line-height: 1;
+    text-align: center;
+}
 }
