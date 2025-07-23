@@ -232,6 +232,11 @@ nav {
     justify-content: center;
 }
 
+.roblox-friends {
+    width: 500px;
+    border-radius: 25px;
+}
+
 /*Horse Riding*/
 
 #horse-riding {
