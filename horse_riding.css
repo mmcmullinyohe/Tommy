@@ -6,9 +6,118 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
 }
+
 
 body {
       background-color:rgb(197, 230, 241);
+}
+
+/*Nav Bar*/
+
+nav {
+    background-color:rgb(197, 230, 241);
+    height: 100px;
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    font-size: 20px;
+}
+
+.nav__link--list {
+    display: flex;
+   list-style: none;
+}
+
+.nav__link--anchor {
+    margin: 0 12px;
+    text-decoration: none;
+    font-size: 16px;
+    color:#242424;
+    font-weight:bold;
+}
+
+.personal__logo {
+    color:rgb(6, 141, 13);
+    font-weight: bold;
+}
+
+/*Horse Riding*/
+
+#horse-riding {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.img__container--horse {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* up to 4 per row */
+    gap: 24px;
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.tommy__pics--horse {
+    margin: 0;
+}
+
+.tommy-pics {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tommy-pics:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 900px) {
+    .img__container--horse {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .img__container--horse {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/*Modal*/
+.modal {
+    display: none;              /* hidden by default */
+    position: fixed;
+    inset: 0;                   /* top/right/bottom/left: 0 */
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal__content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 20px;
+}
+
+.modal__close {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
 }
