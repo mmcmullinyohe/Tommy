@@ -106,6 +106,13 @@ nav {
     z-index: 1000;
 }
 
+.modal video {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 20px;
+}
+
+
 .modal__content {
     max-width: 90%;
     max-height: 90%;
@@ -120,4 +127,30 @@ nav {
     color: #fff;
     cursor: pointer;
     user-select: none;
+}
+
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0;
+}
+
+video, iframe {
+    border-radius: 20px;
+    max-width: 90%;
+}
+
+
+.tommy-video {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tommy-video:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }

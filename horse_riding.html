@@ -1,91 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Horse Riding</title>
     <link rel="stylesheet" href="./horse_riding.css" />
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-            <div class="personal__logo">Tommy Yohe</div>
-            <ul class="nav__link--list">
-                <li>
-                    <a href="/index.html" class="nav__link--anchor link__hover-effect link__hover-effect--black">Home</a>
-                </li>
-                <li>
-                    <a href="#horse-riding" class="nav__link--anchor link__hover-effect link__hover-effect--black">Horse Riding</a>
-                </li>
-                <li>
-                    <a href="#roblox" class="nav__link--anchor link__hover-effect link__hover-effect--black">Roblox</a>
-                </li>
-            </ul>
-        </nav>
+      <div class="personal__logo">Tommy Yohe</div>
+      <ul class="nav__link--list">
+        <li>
+          <a
+            href="/index.html"
+            class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#horse-riding"
+            class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            >Horse Riding</a
+          >
+        </li>
+        <li>
+          <a
+            href="#roblox"
+            class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            >Roblox</a
+          >
+        </li>
+      </ul>
+    </nav>
 
-<section id="horse-riding">
-    <h2>Horse Riding</h2>
-    <p>I love to ride horses. I have been riding for two years.</p>
+    <section id="horse-riding">
+      <h2>Horse Riding</h2>
+      <p>I love to ride horses. I have been riding for two years.</p>
 
-    <div class="img__container--horse">
-      <figure class="tommy__pics--horse">
-        <img src="tommy_assets/Horse1.jpg" class="tommy-pics" alt="Tommy riding horse 1">
-      </figure>
-      <figure class="tommy__pics--horse">
-        <img src="tommy_assets/Horse2.jpg" class="tommy-pics" alt="Tommy riding horse 2">
-      </figure>
-      <figure class="tommy__pics--horse">
-        <img src="tommy_assets/horsestall.jpeg" class="tommy-pics" alt="Tommy brushing horse">
-      </figure>
+      <div class="video-container">
+        <video controls class="tommy-video">
+          <source src="tommy_assets/horse11-25 (1).MOV" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="img__container--horse">
         <figure class="tommy__pics--horse">
-        <img src="tommy_assets/ribbon.jpeg" class="tommy-pics" alt="Prize Ribbon">
-      </figure>
-      <figure class="tommy__pics--horse">
-        <img src="tommy_assets/brushhorse.jpeg" class="tommy-pics" alt="Tommy brushing horse">
-      </figure>
-      <figure class="tommy__pics--horse">
-        <img src="tommy_assets/Kirby.jpeg" class="tommy-pics" alt="Tommy riding Kirby">
-      </figure>
+          <img
+            src="tommy_assets/Horse1.jpg"
+            class="tommy-pics"
+            alt="Tommy riding horse 1"
+          />
+        </figure>
+        <figure class="tommy__pics--horse">
+          <img
+            src="tommy_assets/Horse2.jpg"
+            class="tommy-pics"
+            alt="Tommy riding horse 2"
+          />
+        </figure>
+        <figure class="tommy__pics--horse">
+          <img
+            src="tommy_assets/horsestall.jpeg"
+            class="tommy-pics"
+            alt="Tommy brushing horse"
+          />
+        </figure>
+        <figure class="tommy__pics--horse">
+          <img
+            src="tommy_assets/ribbon.jpeg"
+            class="tommy-pics"
+            alt="Prize Ribbon"
+          />
+        </figure>
+        <figure class="tommy__pics--horse">
+          <img
+            src="tommy_assets/brushhorse.jpeg"
+            class="tommy-pics"
+            alt="Tommy brushing horse"
+          />
+        </figure>
+        <figure class="tommy__pics--horse">
+          <img
+            src="tommy_assets/Kirby.jpeg"
+            class="tommy-pics"
+            alt="Tommy riding Kirby"
+          />
+        </figure>
+      </div>
+    </section>
 
-      <!-- Add more images like this; they’ll auto-flow into rows of 4 -->
-      <!--
-      <figure class="tommy__pics--horse">
-        <img src="tommy_assets/Horse3.jpg" class="tommy-pics" alt="Tommy riding horse 3">
-      </figure>
-      <figure class="tommy__pics--horse">
-        <img src="tommy_assets/Horse4.jpg" class="tommy-pics" alt="Tommy riding horse 4">
-      </figure>
-      -->
+    <!-- Modal for enlarged image -->
+    <div id="imageModal" class="modal">
+      <span class="modal__close">&times;</span>
+      <img class="modal__content" id="modalImg" alt="" />
     </div>
-  </section>
 
-  <!-- Modal for enlarged image -->
-  <div id="imageModal" class="modal">
-    <span class="modal__close">&times;</span>
-    <img class="modal__content" id="modalImg" alt="">
-  </div>
+<script>
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImg');
+  const closeBtn = document.querySelector('.modal__close');
 
-  <script>
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modalImg');
-    const closeBtn = document.querySelector('.modal__close');
-
-    document.querySelectorAll('.tommy-pics').forEach((img) => {
-      img.addEventListener('click', () => {
-        modal.style.display = 'flex';
-        modalImg.src = img.src;
-        modalImg.alt = img.alt;
-      });
+  // Handle images
+  document.querySelectorAll('.tommy-pics').forEach((img) => {
+    img.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      modalImg.style.display = "block";
+      modalImg.src = img.src;
     });
+  });
 
-    closeBtn.addEventListener('click', () => {
+  // Handle video click-to-enlarge
+  const video = document.querySelector('.tommy-video');
+  video.addEventListener('click', () => {
+    modal.style.display = 'flex';
+    modalImg.style.display = "none"; // hide image element
+
+    // Create full-size video inside modal
+    const modalVideo = document.createElement('video');
+    modalVideo.src = video.querySelector('source').src;
+    modalVideo.controls = true;
+    modalVideo.autoplay = true;
+    modalVideo.classList.add('modal-video');
+
+    // Remove any existing video
+    const oldVideo = modal.querySelector('.modal-video');
+    if (oldVideo) oldVideo.remove();
+
+    modal.appendChild(modalVideo);
+  });
+
+  // Close modal
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    const oldVideo = modal.querySelector('.modal-video');
+    if (oldVideo) oldVideo.remove();
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
       modal.style.display = 'none';
-    });
+      const oldVideo = modal.querySelector('.modal-video');
+      if (oldVideo) oldVideo.remove();
+    }
+  });
+</script>
 
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
-  </script>
-</body>
+  </body>
 </html>
