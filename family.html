@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="./family.css" />
 </head>
 <body>
+<nav>
+            <div class="personal__logo">Tommy Yohe</div>
+            <ul class="nav__link--list">
+                <li>
+                    <a href="/index.html" class="nav__link--anchor link__hover-effect link__hover-effect--black">Home</a>
+                </li>
+                <li>
+                    <a href="/horse_riding.html" class="nav__link--anchor link__hover-effect link__hover-effect--black">Horse Riding</a>
+                </li>
+                <li>
+                    <a href="/index.html" class="nav__link--anchor link__hover-effect link__hover-effect--black">Roblox</a>
+                </li>
+            </ul>
+        </nav>
+
     <section id="family">
 <h2>Family</h2>
 <p>I live with my mom, dad, a dog, two cats, and two guinea pigs.</p>
@@ -25,5 +40,52 @@
    </div> 
 </div>
 </section>
+
+<footer>
+    <div class="row footer__row">
+        <a href="#" class="footer__anchor">
+           <figure class="footer__logo">
+            <img src="./tommy_assets/T-removebg-preview.png" class="footer__logo--img">
+           </figure> 
+           <span class="footer__logo--popper">Top
+                <i class="fa-solid fa-arrow-up"></i>
+            </span>
+        </a>
+        <div class="footer__copyright">Copyright © 2025 Tommy Yohe</div>
+    </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <span class="lightbox__close" id="lightboxClose">&times;</span>
+  <img class="lightbox__img" id="lightboxImg" src="" alt="Enlarged image">
+</div>
+
+<script>
+  // Grab all images you want to be clickable
+  const images = document.querySelectorAll('.tommy-pics');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('lightbox--active');
+    });
+  });
+
+  // Close on X click
+  lightboxClose.addEventListener('click', () => {
+    lightbox.classList.remove('lightbox--active');
+  });
+
+  // Close when clicking outside the image
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove('lightbox--active');
+    }
+  });
+</script>
+
 </body>
 </html>

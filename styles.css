@@ -259,10 +259,12 @@ nav {
     margin-left: 32px;
 }
 
-/* Footer */
+
 /* Footer */
 footer {
     background-color: #242424;
+    padding: 20px 0;
+
 }
 
 .footer__social--list {
@@ -278,11 +280,11 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 8px 0;
+    gap: 0px;
 }
 .footer__logo--img {
-    width: 300px;
-    height: 300px;
+    width: 90px;
+    height: auto;
 
 }
 .footer__social--link,
@@ -302,11 +304,11 @@ footer {
 
 .footer__anchor {
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 
 .footer__anchor:hover .footer__logo--popper {
-transform: translateX(20px);
+transform: translateX(50px);
 opacity: 1;
 }
 
